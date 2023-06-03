@@ -16,6 +16,21 @@
 
 a{
     
-    color: brown;
+    color: cyan;
+    
+}
+h1,p{
+    
+    h1{font-size: 2.5em;}
+    
+}
+a:active{
+    background-color: red;
+    color:white;
+    
+}  
+body h1{
+    
+    font-family: Times New Roman;
     
 }
