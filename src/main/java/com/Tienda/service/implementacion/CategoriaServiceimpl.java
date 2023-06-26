@@ -11,7 +11,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service //siempre poner esta notacion,es quien tiene la logica
-public class CategoriaServicempl implements CategoriaService{
+public class CategoriaServiceimpl implements CategoriaService{
+    
+    
     
     @Autowired 
     CategoriaDao categoriaDao;
@@ -27,5 +29,24 @@ public class CategoriaServicempl implements CategoriaService{
        return categorias;
     }
     
-    
+    @Override
+    @Transactional(readOnly = true)
+    public Categoria getCategoria(Categoria categoria) {
+        return categoriaDao.findById(categoria.getIdCategoria()).orElse(null);
+    }
+
+    @Override
+    @Transactional
+    public void save(Categoria categoria) {
+        categoriaDao.save(categoria);
+    }
+
+    @Override
+    @Transactional
+    public void delete(Categoria categoria) {
+        categoriaDao.delete(categoria);
+    }
 }
+    
+    
+

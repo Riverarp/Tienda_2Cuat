@@ -10,4 +10,12 @@ public interface CategoriaService {
     
     public List<Categoria> getCategorias(boolean activos);
     
+    //se obtine una categoria por su id
+    public Categoria getCategoria(Categoria categoria);
+    //insertar:se inserta cunado el id categoria est vacio (valor 0 o null) 
+    //modificar: se modi cuando cateegoria no esta vacia
+    public void save(Categoria categoria);
+    
+    //Se elimina un registro por su Id:
+    public void delete(Categoria categoria);
 }
