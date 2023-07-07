@@ -47,6 +47,4 @@ public class CategoriaServiceimpl implements CategoriaService{
         categoriaDao.delete(categoria);
     }
 }
-    
-    
-
+ 
