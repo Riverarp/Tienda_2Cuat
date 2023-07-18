@@ -18,4 +18,6 @@ public interface CategoriaService {
     
     //Se elimina un registro por su Id:
     public void delete(Categoria categoria);
+    //ejemplo de metodo apmleado
+    public List<Categoria> getPorDescripcion(String descripcion);
 }
